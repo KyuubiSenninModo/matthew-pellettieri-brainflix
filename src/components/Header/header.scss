@@ -1,10 +1,6 @@
 @use '../../styles/partials/mixins.scss' as*;
 
 .header {
-    @include tablet {
-        
-    }
-
     .logo--container {
         @include desktop {
         display: none;
@@ -32,6 +28,7 @@
         @include tablet {
             width: 30rem;
             margin-right: 10rem;
+            margin-left: 2rem;
         }
         @include mobile {
             display: none;
@@ -41,11 +38,12 @@
         @include desktop {
         align-items: center;
         display: flex;
-        margin-right: 10rem;
+        margin: 1rem 10rem 1rem 0;
         }
         @include tablet {
             align-items: center;
             display: flex;
+            margin-bottom: 1rem;
         }
 
         @include mobile {
@@ -108,6 +106,7 @@
         @include desktop {
         color: white;
         background-color: #0095ff;
+        font-weight: 700;
         height: 3.5rem;
         width: 15rem;
         border-radius: .5rem;
@@ -121,8 +120,10 @@
         @include tablet {
         color: white;
         background-color: #0095ff;
+        font-weight: 700;
         height: 3.5rem;
         width: 30rem;
+        font-size: 1rem;
         border-radius: .5rem;
         background-image: url("../../assets/Icons/upload.svg");
         background-repeat: no-repeat;
@@ -142,6 +143,7 @@
         height: 3.5rem;
         width: 100%;
         border-radius: .5rem;
+        font-weight: 700;
         background-image: url("../../assets/Icons/upload.svg");
         background-repeat: no-repeat;
         background-position: 1rem;

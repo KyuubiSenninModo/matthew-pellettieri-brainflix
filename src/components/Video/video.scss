@@ -1,0 +1,20 @@
+@use '../../styles/partials/mixins.scss' as *;
+
+.video--container {
+    background-color: black;
+    text-align: center;
+}
+.main-video {
+    @include desktop {
+        width: 65%;
+        aspect-ratio: 16/9;
+    }
+    @include tablet {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    @include mobile {
+        width: 100%;
+        
+    }
+}

@@ -1,0 +1,369 @@
+@use '../../styles/partials/mixins.scss' as *;
+
+.video--header {
+    @include desktop {
+        margin: 0 0 0 10rem;
+        padding-top: 3rem;
+        border-right: 2px solid #e1e1e1;
+        font-size: 3rem;
+    }
+    @include tablet {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-size: 2.7rem;
+    }
+    @include mobile {
+    margin: 1rem;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 1.5rem;
+    }
+}
+.info--container {
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10rem;
+        border-bottom: 2px solid #e1e1e1;
+        border-right: 2px solid #e1e1e1;
+    }
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        border-bottom: 2px solid #e1e1e1
+    }
+    @include mobile {
+        display: none;
+    }
+    .tablet--left {
+        @include desktop {
+        display: flex;
+        gap: 2rem;
+        }
+        @include tablet {
+        display: flex;
+        gap: 2rem;
+        }
+    }
+    .views--icon {
+        @include desktop {
+            padding-right: .5rem;
+        }
+        @include tablet {
+        padding-right: .5rem;
+        }
+    }
+    .tablet--right {
+        @include desktop {
+        display: flex;
+        gap: 2rem;
+        padding-right: 2rem;
+        }
+        @include tablet {
+        display: flex;
+        gap: 2rem;
+        }
+    }
+    .likes--icon {
+        @include desktop {
+            padding-right: .5rem;
+        }
+        @include tablet {
+        padding-right: .5rem;
+        }
+    }
+}
+.mobile--row--one {
+    @include desktop {
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5rem;
+    }
+    .channel--text {
+        @include desktop {
+            font-weight: 700;
+        }
+        @include tablet {
+            font-weight: 700;
+        }
+        @include mobile {
+        margin-left: 1rem;
+        font-weight: 700;
+        }
+    }
+    .views {
+        @include mobile {
+            color: #afafaf;
+        }
+    }
+    .views--icon {
+        @include mobile {
+        padding-right: .5rem;
+        }
+    }
+}
+.mobile--row--two {
+    @include desktop {
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-right: 5rem;
+    }
+    .date {
+        @include mobile {
+            color: #afafaf;
+        }
+    }
+    .likes {
+        @include mobile {
+            color: #afafaf;
+        }
+    }
+    .likes--icon {
+        @include mobile {
+        padding-right: .5rem;
+        }
+    }
+}
+.video--description {
+    @include desktop {
+        margin: 0 0 0 10rem;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+        font-size: 1.2rem;
+        line-height: 22px;
+        border-right: 2px solid #e1e1e1;
+    }
+    @include tablet {
+        margin: 2rem;
+        font-size: 1.2rem;
+        line-height: 22px;
+    }
+    @include mobile {
+    margin: 1rem;
+    line-height: 22px;
+    }
+}
+.comments--number {
+    @include desktop {
+        margin: 0 0 0 10rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        border-right: 2px solid #e1e1e1;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    @include tablet {
+        margin: 2rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    @include mobile {
+    margin: 1rem;
+    font-weight: 700;
+    }
+}
+.form--container--mobile {
+    @include desktop {
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+    display: flex;
+    margin: 1rem;
+    gap: 1rem;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 1.5rem;
+    }
+    .comments--form {   
+        @include mobile {
+        display: flex;
+        flex-direction: column;
+        }
+    }
+    .comments--label {
+        @include mobile {
+            color: #afafaf;
+            padding-bottom: .3rem;
+        }
+    }
+    #user--comment {
+        @include mobile {
+            height: 5rem;
+            background-color: #fafafa;
+            border: .1rem solid #e1e1e1;
+            border-radius: .2rem;
+            width: 18rem;
+        }
+    }
+    .avatar {
+        @include mobile {
+        width: 3rem;
+        height: 3rem;
+        margin-top: 1rem;
+        border-radius: 50%;
+        }
+    }
+    .comment--button {
+        @include mobile {
+        margin-top: 1rem;
+        color: white;
+        font-weight: 700;
+        background-color: #0095ff;
+        height: 3.5rem;
+        width: 100%;
+        border-radius: .5rem;
+        background-image: url("../../assets/Icons/add_comment.svg");
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        }
+    }
+}
+
+.date {
+    @include desktop {
+        color: #afafaf;
+    }
+    @include tablet {
+        color: #afafaf;
+    }
+}
+.likes {
+    @include desktop {
+        color: #afafaf;
+    }
+    @include tablet {
+        color: #afafaf;
+    }
+}
+.views {
+    @include desktop {
+        color: #afafaf;
+    }
+    @include tablet {
+        color: #afafaf;
+    }
+}
+.channel--text {
+    @include desktop {
+        font-weight: 700;
+    }
+    @include tablet {
+        font-weight: 700;
+    }
+}
+.form--container--tablet {
+    @include desktop {
+        display: flex;
+        margin-left: 10rem;
+        border-bottom: 2px solid #e1e1e1;
+        border-right: 2px solid #e1e1e1;
+        padding-bottom: 2rem;
+    }
+    @include tablet {
+        display: flex;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        border-bottom: 2px solid #e1e1e1;
+        padding-bottom: 2rem;
+    }
+    @include mobile {
+        display: none;
+    }
+    .avatar {
+        @include desktop {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-top: 1.2rem;
+            margin-right: 1rem;
+        }
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-top: 1.2rem;
+            margin-right: 1rem;
+        }
+    }
+    .comments--form {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .comments--label {
+        @include desktop{
+        color: #afafaf;
+        }
+        @include tablet {
+        color: #afafaf;
+        }
+    }
+    #user--comment {
+        @include desktop {
+        width: 30rem;
+        height: 2.5rem;
+        color: #323232;
+        }
+        @include tablet {
+        width: 30rem;
+        height: 2.5rem;
+        color: #323232;
+        }
+    }
+    .comment--button {
+        @include desktop {
+        margin-top: 1rem;
+        color: white;
+        font-weight: 700;
+        background-color: #0095ff;
+        height: 3rem;
+        width: 100%;
+        border-radius: .5rem;
+        background-image: url("../../assets/Icons/add_comment.svg");
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        margin-left: 1rem;
+        margin-right: 2rem;
+        min-width: 170px;
+        }
+        @include tablet {
+        margin-top: 1rem;
+        color: white;
+        background-color: #0095ff;
+        height: 3rem;
+        width: 100%;
+        font-weight: 700;
+        border-radius: .5rem;
+        background-image: url("../../assets/Icons/add_comment.svg");
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        margin-left: 1rem;
+        max-width: 300px;
+        }
+    }
+}
