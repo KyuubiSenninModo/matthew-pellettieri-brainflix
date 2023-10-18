@@ -1,26 +1,26 @@
-import './card.scss';
-import placeHolder from '../../assets/Images/Mohan-muruge.jpg';
+import "./card.scss";
+import placeHolder from "../../assets/Images/Mohan-muruge.jpg";
+import { Link, NavLink } from "react-router-dom";
 
-
-function Card (props) {
-    const clickHandler = () => {
-        props.changeCurrentVideo(props.id)
-    }
-    return (
+function Card(props) {
+  const videoPath = '/' + props.id;
+  return (
+    <Link to={videoPath}>
     <>
-    <div className="card" onClick={clickHandler}>
+      <div className="card" >
         <div className="next-videos--container">
-            <div className="videos--flex">
-                <img className='thumbnail' src={props.image} alt={props.title} />
-            </div>
-            <div className="description--flex">
-                <p className="title">{props.title}</p>
-                <p className="channel">{props.channel}</p>
-            </div>
+          <div className="videos--flex">
+            <img className="thumbnail" src={props.image} alt={props.title} />
+          </div>
+          <div className="description--flex">
+            <p className="title">{props.title}</p>
+            <p className="channel">{props.channel}</p>
+          </div>
         </div>
-    </div>
+      </div>
     </>
-);
+    </Link>
+  );
 }
 
 export default Card;

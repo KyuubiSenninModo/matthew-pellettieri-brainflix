@@ -1,84 +1,50 @@
-import './App.scss';
-import { useState } from 'react';
-import Header from './components/Header/header';
-import Main from './components/Main/main';
-import IndividualComment from './components/IndividualComment/individualComment';
-import Video from './components/Video/video';
-import videoDetails from './data/video-details.json';
-import videoList from './data/videos.json';
-import VideoList from './components/VideoList/videoList';
-import CardDesktop from './components/CardDesktop/cardDesktop';
-
-
-
-
+import "./App.scss";
+import { BrowserRouter, Routes, Route, Link, useParams} from "react-router-dom";
+import VideoDetailsPage from "./components/VideoDetailsPage/videoDetailsPage";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 
 
 function App() {
-  const [activeVideo, setActiveVideo] = useState(videoDetails[0]);
 
-  const [details, setDetails] = useState(videoDetails[0]);
+  const params = useParams();
+  const [videoDetails, setVideoDetails] = useState([]);
+  // const activeVideo = requestedVideo || videoDetails[0];
+  const requestedVideoid = params.id;
+  const requestedVideo = videoDetails.find(
+    (video) => video.id === requestedVideoid
+  );
+  setVideoDetails = 
+  useEffect(() => {
+    axios
+      .get(`https://project-2-api.herokuapp.com/videos/${requestedVideoid}/?api_key=` + apiKey)
+      .then((res) => {
+        
+      })
+  })
+  // useEffect(() => {
+  //   axios
+  //     .get("https://project-2-api.herokuapp.com/videos?api_key=" + apiKey)
+  //     .then((res) => { 
+  //       setVideoDetails(res.data);
+  //       setNextVideos(res.data.filter((video) => video.id !== activeVideo.id))
+  //     });
+  // }, []);
+
+
   
-  
-  
-  const changeCurrentVideo = (videoId) => {
-    setActiveVideo(videoId)
-  }
- 
-  const currentVideo = (videoDetails.filter(video => video.id === activeVideo))[0];
-
-
-
   return (
-    <>
-    <Header />
-    <Video 
-      currentVideo = {currentVideo}
-      thumbnail = {activeVideo.image}
-    />
-    <div className="desktop--flex">
-    <div className='shrink'>
-      <Main 
-        title = {activeVideo.title}
-        channel = {activeVideo.channel}
-        likes = {activeVideo.likes}
-        views = {activeVideo.views}
-        timestamp = {activeVideo.timestamp}
-        description = {activeVideo.description}
-      />
-      {activeVideo.comments.map(comment => (
-        <IndividualComment 
-        name = {comment.name}
-        comment = {comment.comment}
-        timestamp = {comment.timestamp}
-        key = {comment.id}
-      />
-      ))}
-      <div className="no--display-on--desktop">
-        <VideoList 
-          activeVideo = {activeVideo}
-          changeCurrentVideo = {changeCurrentVideo}
-        />
-     </div>
-    </div>
-    <div>
-      <p className="next--videos">NEXT VIDEOS</p>
-    {videoList.map(video => (
-                <CardDesktop 
-                    title = {video.title}
-                    id = {video.id}
-                    key = {video.id}
-                    channel = {video.channel}
-                    image = {video.image}
-                    activeVideo = {activeVideo}
-                    changeCurrentVideo = {changeCurrentVideo}
-                />
-        ))}
-    </div>
-    </div>
-    </>
+
+  <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<VideoDetailsPage />}> 
+    <Route path="/:id" element={<VideoDetailsPage activeVideo={}/>} />
+    </Route>
+  </Routes>
+  </BrowserRouter>
   );
 }
 
 export default App;
+export const apiKey = "edbed7ac-b4d8-4be6-9373-68e93be6ff38";

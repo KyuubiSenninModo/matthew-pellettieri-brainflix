@@ -1,0 +1,41 @@
+@use '../../styles/partials/fonts.scss' as *;
+@use '../../styles/partials/mixins.scss' as *;
+
+.desktop--flex {
+    display: flex;
+}
+.no--display-on--desktop {
+    @include desktop {
+    display: none;
+    }
+}
+.no--display-on--tablet {
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+}
+.next--header {
+    color: #afafaf;
+}
+.shrink {
+    @include desktop {
+        width: 90%;
+        margin-bottom: 8rem;
+    }
+}
+.next--videos {
+    @include desktop {
+        padding-left: 2rem;
+        color: #afafaf;
+        font-weight: 700;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+}
