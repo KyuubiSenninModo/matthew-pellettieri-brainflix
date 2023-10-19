@@ -7,7 +7,7 @@ function CardDesktop(props) {
   return (
     <>
     <Link to={videoPath}>
-      <div className="card-d" onClick={() => props.changeCurrentVideo(props.id)}>
+      <div className="card-d">
         <div className="next-videos--container-d">
           <div className="videos--flex-d">
             <img className="thumbnail-d" src={props.image} alt={props.title} />
