@@ -215,6 +215,10 @@
             width: 18rem;
         }
     }
+    ::placeholder {
+        color: #323232;
+        padding-left: 1rem;
+    }
     .avatar {
         @include mobile {
         width: 3rem;
