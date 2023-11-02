@@ -1,0 +1,134 @@
+@use '../../styles/partials/mixins.scss' as *;
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+.card {
+    .next-videos--container {
+        @include desktop {
+        display: none;
+        }
+        @include tablet {
+        display: flex;
+        margin-left: 2rem;
+        }
+        @include mobile {
+        display: flex;
+        }
+    }
+    .videos--flex {
+        @include desktop {
+        display: flex;
+        flex-direction: column;
+        }
+        @include tablet {
+        display: flex;
+        flex-direction: column;
+        }
+        @include mobile {
+        display: flex;
+        flex-direction: column;
+        }
+    }
+    .thumbnail {
+        @include desktop {
+        width: 150px;
+        aspect-ratio: 16/9;
+        border-radius: 4px;
+        margin: 0 2rem 2rem 0;
+        }
+        @include tablet {
+        width: 150px;
+        aspect-ratio: 16/9;
+        border-radius: 4px;
+        margin: 0 2rem 2rem 0;
+        }
+        @include mobile {
+        width: 150px;
+        aspect-ratio: 16/9;
+        border-radius: 4px;
+        margin: 0 1rem 1rem 1rem;
+        }
+    }
+    .description--flex {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    .title {
+        @include tablet {
+        font-weight: 700;
+        margin: 0;
+        width: 60%;
+        }
+        @include mobile {
+        font-weight: 700;
+        margin: 0;
+        }
+    }
+    .channel {
+        @include desktop {
+
+        }
+        @include tablet {
+            margin: 0 0 2rem 0;
+        }
+        @include mobile {
+            margin: 0 0 1rem 0;
+        }
+    }
+}
+
+
+// DESKTOP
+.card--desktop {
+    @include mobile {
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
+    .next-videos--container {
+        @include desktop {
+        display: flex;
+        margin-left: 1rem;
+        }
+    }
+    .videos--flex {
+        @include desktop {
+        display: flex;
+        flex-direction: column;
+        }
+    }
+    .thumbnail {
+        @include desktop {
+            width: 150px;
+            aspect-ratio: 16/9;
+            border-radius: 4px;
+            margin: 0 1rem 0 0;
+            }
+    }
+    .description--flex {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }  
+    }
+    .title {
+        font-weight: 700;
+        margin: 0;
+        width: 60%;
+    }
+    .channel {
+        margin: 0 0 2rem 0;
+    }
+}

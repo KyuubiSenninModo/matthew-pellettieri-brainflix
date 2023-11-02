@@ -1,0 +1,367 @@
+@use '../../styles/partials/mixins.scss' as *;
+
+
+.upload--desktop--flex {
+    @include desktop {
+        display: flex;
+        align-items: baseline;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+}
+.thumbnail--flex {
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10rem;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+}
+.border--bottom {
+    @include desktop {
+        border-bottom: 2px solid #e1e1e1;
+    }
+    @include tablet {
+    border-bottom: 2px solid #e1e1e1;
+    }
+}
+.border--bottom--tablet {
+    @include desktop {
+    border-bottom: 2px solid #e1e1e1;
+    margin-left: 3rem;
+    margin-right: 10rem;
+    padding-bottom: 2rem;
+     }
+    @include tablet {
+    border-bottom: 2px solid #e1e1e1;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-bottom: 2rem;
+    }
+}
+.upload__header {
+    @include desktop {
+        margin: 3rem 10rem 2rem 10rem;
+        padding-bottom: 1rem;
+        color: #323232;
+        font-size: 3rem;
+        border-bottom: 2px solid #e1e1e1;
+    }
+    @include tablet {
+        margin: 3rem 3rem 2rem 3rem;
+        padding-bottom: 1rem;
+        color: #323232;
+        font-size: 3rem;
+        border-bottom: 2px solid #e1e1e1;
+    }
+    @include mobile {
+        margin: 3rem 0 2rem 1rem;
+        color: #323232;
+    }
+}
+.video__header--desktop {
+    @include desktop {
+        margin-top: 0;
+        margin-bottom: .5rem;
+        color: #afafaf;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+}
+.video__header {
+    @include desktop {
+        display: none;
+    }
+    @include tablet {
+    margin-left: 3rem;
+    margin-bottom: .5rem;
+    color: #afafaf;
+    }
+    @include mobile {
+    margin-left: 1rem;
+    color: #afafaf;
+    }
+}
+.thumbnail--desktop {
+    @include desktop {
+    width: 25rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+}
+.thumbnail {
+    @include desktop {
+    display: none;
+    }
+    @include tablet {
+    width: 25rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    }
+    @include mobile {
+    width: 25rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    }
+}
+
+.video--form--desktop {
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+        width: 100%;
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+    .title__label {
+        @include desktop {
+            color: #afafaf;
+            font-weight: 700;
+            margin-bottom: .5rem;
+        }
+    }
+    #user--title {
+        @include desktop {
+        max-width: 74rem;
+        margin-right: 10rem;
+        height: 2rem;
+        border-radius: .3rem;
+        background-color: #fafafa;
+        border: .15rem solid #e1e1e1;
+        }
+    }
+    ::placeholder {
+        color: #323232;
+        padding-left: 1rem;
+    }
+    .video__description {
+        @include desktop {
+        margin-top: 2rem;
+        color: #afafaf;
+        font-weight: 700;
+        }
+    }
+    #user--description {
+        @include desktop {
+            max-width: 74rem;
+            margin-right: 10rem;
+            border-radius: .3rem;
+            background-color: #fafafa;
+            border: .15rem solid #e1e1e1;
+            height: 7rem;
+        }
+    }
+    .publish__button {
+        @include desktop{
+            display: none;
+        }
+    }
+    .cancel__button {
+        @include desktop {
+            display: none;
+        }
+    }
+}
+
+
+.video--form {
+    @include desktop {
+        display: none;
+    }
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+    }
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+    .title__label {
+        @include desktop {
+            color: #afafaf;
+            font-weight: 700;
+            margin-bottom: .5rem;
+        }
+        @include tablet {
+            color: #afafaf;
+            font-weight: 700;
+        }
+        @include mobile {
+            color: #afafaf;
+            font-weight: 700;
+        }
+    }
+    #user--title {
+        @include desktop {
+        max-width: 74rem;
+        margin-right: 3rem;
+        height: 2rem;
+        border-radius: .3rem;
+        background-color: #fafafa;
+        border: .15rem solid #e1e1e1;
+        }
+        @include tablet {
+        max-width: 74rem;
+        margin-right: 3rem;
+        height: 2rem;
+        border-radius: .3rem;
+        background-color: #fafafa;
+        border: .15rem solid #e1e1e1;
+        }
+        @include mobile {
+        width: 25rem;
+        height: 2rem;
+        border-radius: .3rem;
+        background-color: #fafafa;
+        border: .15rem solid #e1e1e1;
+        }
+    }
+    ::placeholder {
+        color: #323232;
+        padding-left: 1rem;
+    }
+    .video__description {
+        @include desktop {
+        margin-top: 2rem;
+        color: #afafaf;
+        font-weight: 700;
+        }
+        @include tablet {
+        margin-top: 2rem;
+        color: #afafaf;
+        font-weight: 700;
+        }
+        @include mobile {
+        margin-top: 2rem;
+        color: #afafaf;
+        font-weight: 700;
+        }
+    }
+    #user--description {
+        @include desktop {
+            max-width: 74rem;
+            margin-right: 3rem;
+            height: 2rem;
+            border-radius: .3rem;
+            background-color: #fafafa;
+            border: .15rem solid #e1e1e1;
+            height: 5rem;
+        }
+        @include tablet {
+            max-width: 74rem;
+            margin-right: 3rem;
+            height: 2rem;
+            border-radius: .3rem;
+            background-color: #fafafa;
+            border: .15rem solid #e1e1e1;
+            height: 5rem;
+        }
+        @include mobile {
+            width: 25rem;
+            height: 2rem;
+            border-radius: .3rem;
+            background-color: #fafafa;
+            border: .15rem solid #e1e1e1;
+            height: 5rem;
+            }
+    }
+    .publish__button {
+        @include desktop{
+            display: none;
+        }
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+            margin-top: 1rem;
+            color: white;
+            font-weight: 700;
+            background-color: #0095ff;
+            height: 3.5rem;
+            max-width: 26rem;
+            border-radius: .5rem;
+            background-image: url("../../assets/Icons/publish.svg");
+            background-repeat: no-repeat;
+            background-position: 1rem;
+            }
+    }
+    .cancel__button {
+        @include desktop {
+            display: none;
+        }
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+            background-color: white;
+            border: none;
+            max-width: 26rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            color: #0095ff;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+    }
+}
+.button__container {
+    display: flex;
+    justify-content: right;
+    align-items: baseline;
+    gap: 8rem;
+    margin-right: 10rem;
+    @include mobile {
+        display: none;
+    }
+    .publish__button--tablet {
+        margin-top: 1rem;
+        color: white;
+        font-weight: 700;
+        background-color: #0095ff;
+        height: 3.5rem;
+        width: 100%;
+        max-width: 15rem;
+        border-radius: .5rem;
+        background-image: url("../../assets/Icons/publish.svg");
+        background-repeat: no-repeat;
+        background-position: 1rem;
+    }
+    .cancel__button--tablet {
+        background-color: white;
+        border: none;
+        max-width: 26rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        color: #0095ff;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+}

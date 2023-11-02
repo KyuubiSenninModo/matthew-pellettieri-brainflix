@@ -1,0 +1,172 @@
+@use '../../styles/partials/mixins.scss' as*;
+
+.header {
+    .logo--container {
+        @include desktop {
+        display: none;
+        }
+        @include tablet{
+            display: none;
+        }
+
+        @include mobile {
+        display: flex;
+        justify-content: center;
+        }
+    }
+    .header__logo {
+        @include mobile {
+        width: 40%;
+        }
+    }
+    .header__logo--tablet {
+        @include desktop {
+        width: 18rem;
+        margin-right: 20rem;
+        margin-left: 10rem;
+        }
+        @include tablet {
+            width: 30rem;
+            margin-right: 10rem;
+            margin-left: 2rem;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+    
+    .searchbar--container {
+        @include desktop {
+        align-items: center;
+        display: flex;
+        margin: 1rem 10rem 1rem 0;
+        }
+        @include tablet {
+            align-items: center;
+            display: flex;
+            margin-bottom: 1rem;
+        }
+    .Link {
+        @include desktop {
+            display: contents;
+            text-decoration: none;
+        }
+        @include tablet {
+            display: contents;
+            text-decoration: none;
+        }
+        @include mobile {
+            :visited {
+                text-decoration: none;
+            }
+            display: contents;
+            text-decoration: none;
+        }
+    }
+        @include mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        }
+    }
+    .searchbar {
+        @include desktop {
+        height: 3rem;
+        width: 25rem;
+        border-radius: .5rem;
+        margin-right: 2rem;
+        }
+        @include tablet {
+        height: 3rem;
+        width: 40rem;
+        border-radius: .5rem;
+        margin-right: 2rem;
+        }
+        @include mobile {
+        height: 3rem;
+        width: 30rem;
+        border-radius: .5rem;
+        margin-right: 2rem;
+        }
+    }
+    .avatar {
+        @include desktop {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        margin-left: 3rem;
+        float: right;
+        }
+        @include tablet {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-left: 2rem;
+        margin-right: 3rem;
+        }
+
+        @include mobile {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        }
+    }
+    .button--container {
+        @include mobile {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+        }
+    }
+    .upload--button--tablet {
+        @include desktop {
+        color: white;
+        background-color: #0095ff;
+        font-weight: 700;
+        height: 3.5rem;
+        font-size: 1rem;
+        width: 15rem;
+        border-radius: .5rem;
+        background-image: url("../../assets/Icons/upload.svg");
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        }
+        @include mobile {
+            display: none;
+        }
+        @include tablet {
+        color: white;
+        background-color: #0095ff;
+        font-weight: 700;
+        height: 3.5rem;
+        width: 30rem;
+        font-size: 1rem;
+        border-radius: .5rem;
+        background-image: url("../../assets/Icons/upload.svg");
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        }
+    }
+    .upload--button--mobile {
+        @include desktop {
+            display: none;
+        }
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+        color: white;
+        background-color: #0095ff;
+        height: 3.5rem;
+        width: 100%;
+        max-width: 580px;
+        font-size: 1rem;
+        border-radius: .5rem;
+        font-weight: 700;
+        background-image: url("../../assets/Icons/upload.svg");
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        }
+    }
+}

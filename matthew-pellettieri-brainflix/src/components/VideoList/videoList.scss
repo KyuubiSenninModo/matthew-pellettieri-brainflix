@@ -1,0 +1,22 @@
+@use '../../styles/partials/mixins.scss' as *;
+
+.video-list{
+    @include desktop {
+        display: none;
+    }
+}
+.header--mobile-and--tablet {
+    @include desktop{
+        display: none;
+    }
+    @include tablet {
+    color: #afafaf;
+    margin: 2rem 0 2rem 2rem;
+    font-size: 1rem;
+    }
+    @include mobile {
+    color: #afafaf;
+    margin: 2rem 0 2rem 1rem;
+    font-size: 1rem;
+    }
+}
